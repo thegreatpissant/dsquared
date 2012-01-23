@@ -281,10 +281,10 @@ void FontInit()
 
 void printGLSTRING( char *s, float x, float y ,float z, float pnt)
 {
-  float cpnt = pnt/10.0f;
+  float fpnt = pnt/10.0f;
     glPushMatrix();
         glTranslatef(x,y,z);
-        glScalef(cpnt,cpnt,0.0f);
+        glScalef(fpnt,fpnt,0.0f);
         GLsizei len = strlen(s);
         glCallLists(len, GL_BYTE, (GLbyte *) s);
     glPopMatrix();
