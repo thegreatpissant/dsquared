@@ -12,26 +12,23 @@
 */
 
 extern int gmState;
-char *mML1 = "NEW GAME";
-
-char *mML2 = "SCORES";
-char *mML2a = "VIEW";
-char *mML2b = "CLEAR";
-
-char *mML3  = "SETTINGS";
-char *mML3a = "AUDIO";
-char *mML3b = "VOLUME";
-char *mML3c = "MIN";
-char *mML3d = "MAX";
-char *mML3e = "VIDEO";
-char *mML3f = "RESOLUTION";
-char *mML3g = "FULLSCREEN";
-char *mML3h = "KEYBOARD";
-char *mML3i = "LEFT";
-char *mML3j = "RIGHT";
-char *mML3k = "DOWN";
-
-char *mML4 = "QUIT Y?N";
+char mML1[] = "NEW GAME";
+char mML2[] = "SCORES";
+char mML2a[] = "VIEW";
+char mML2b[] = "CLEAR";
+char mML3[]  = "SETTINGS";
+char mML3a[] = "AUDIO";
+char mML3b[] = "VOLUME";
+char mML3c[] = "MIN";
+char mML3d[] = "MAX";
+char mML3e[] = "VIDEO";
+char mML3f[] = "RESOLUTION";
+char mML3g[] = "FULLSCREEN";
+char mML3h[] = "KEYBOARD";
+char mML3i[] = "LEFT";
+char mML3j[] = "RIGHT";
+char mML3k[] = "DOWN";
+char mML4[] = "QUIT Y?N";
 
 struct s_MenuItem {
   int elements;

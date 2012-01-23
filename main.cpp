@@ -30,15 +30,20 @@
 cPiece token;				// Current piece in play.
 cPiece next_token;			// Piece that shows as next to the player.
 int GWH = 480;				// board width and height are the same?
-char *PGame = "N - NEW GAME ";		// const strings.
-char *VScores = "S - SCORES";
-char *EQuit = "HIT ESCAPE TO QUIT ";
-char *Gtitle = "DSQUARED";
-char *Etitle = "TOP SCORES";
-char *Sscore = "SCORE";
-char *Slevel = "LEVEL";
-char *Snpiece = "NEXT";
-char *Sgover = "GAME OVER";		//  Const strings end.
+char PGame[]	= "N - NEW GAME ";	       
+char VScores[]	= "S - SCORES";
+char RResume[]  = "R - RESUME GAME";
+char NNew[]     = "N - NEW GAME";
+char EQuit[]	= "HIT ESCAPE TO QUIT ";
+char Gtitle[]	= "DSQUARED";
+char Etitle[]	= "TOP SCORES";
+char Sscore[]	= "SCORE";
+char Slevel[]	= "LEVEL";
+char Snpiece[]	= "NEXT";
+char Sgover[]	= "GAME OVER";		
+char sHitEscape[] = "HIT ESCAPE TO RETURN";
+char sPoints[]  = "POINTS";
+char sLevel[]   = "LEVEL";
 char Level[16]; 			//  String to print changin level number for display.
 char Score[16];				//  String to print changing score for display.
 char TopLevel[16];			//  String to print current top score selection.
@@ -259,9 +264,9 @@ void ViewEndDisplay(void)
   glPushMatrix();
   glColor3f(0.5f, 0.0f, 1.0f);
   printGLSTRING(Etitle,-6.25, 9.25, 0.0, 4.0);
-  printGLSTRING("HIT ESCAPE TO RETURN",-6.0,-9.0,0.0,2.0);
-  printGLSTRING("POINTS", -5.25, 7.4,0.0,2.0);
-  printGLSTRING("LEVEL", 3.0, 7.4,0.0,2.0);
+  printGLSTRING(sHitEscape,-6.0,-9.0,0.0,2.0);
+  printGLSTRING(sPoints,-5.25, 7.4,0.0,2.0);
+  printGLSTRING(sLevel,3.0, 7.4,0.0,2.0);
   float sx = 5.4;
   for (int i = 0; i < 5; i++)
     {
@@ -292,8 +297,8 @@ void MainMenuDisplay(void)
   printGLSTRING(Gtitle,-5.0, 9.25, 0.0, 4.0);
   if(paused)
     {
-      printGLSTRING("R - RESUME GAME", -4.1,5.0,0.0,2.0);
-      printGLSTRING("N - NEW GAME", -4.1, 3.0, 0.0, 2.0);
+      printGLSTRING(RResume, -4.1,5.0,0.0,2.0);
+      printGLSTRING(NNew, -4.1, 3.0, 0.0, 2.0);
       printGLSTRING(VScores, -4.1, 1.0,0.0,2.0);
     }
   else	{
