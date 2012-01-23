@@ -1,14 +1,14 @@
 /*
-    Menu.h
-    Includes interface for menu system.
-    Main and Pause
+  Menu.h
+  Includes interface for menu system.
+  Main and Pause
 */
 
 #include <GL/gl.h>
 #include <GL/glu.h>
 
 /*
-    Main Menu interface.
+  Main Menu interface.
 */
 
 extern int gmState;
@@ -34,54 +34,54 @@ char *mML3k = "DOWN";
 char *mML4 = "QUIT Y?N";
 
 struct s_MenuItem {
-        int elements;
-        char *name;
-        int function;
+  int elements;
+  char *name;
+  int function;
 };
 s_MenuItem StartMenuListing[3];
 s_MenuItem GameMenuListing[2];
 
 class c_Menu {
-    /* Menu class */
-    int mx,my;    //  Position.
-    int mw,mh;    //  Size.
+  /* Menu class */
+  int mx,my;    //  Position.
+  int mw,mh;    //  Size.
 
-    c_Menu(int x, int y, int w, int h){
-        mx = x; my=y; mw=w; mh=h;
-    }
-    void display();
+  c_Menu(int x, int y, int w, int h){
+    mx = x; my=y; mw=w; mh=h;
+  }
+  void display();
 };
 
 
 /*
-    Function: diplay YN? quit message. Send the WM_quit message if necescary
+  Function: diplay YN? quit message. Send the WM_quit message if necescary
 */
 void checkForQuit()
 {
-    //PostQuitMessage(0);
+  //PostQuitMessage(0);
 }
 
 void StartMenuFunctions(int function)
 {
-    switch(function) {
-        case 0: {
-            gmState = 1;
-        } break;
-        case 1: {
-            gmState = 2;
-        } break;
-        case 2: {
-            checkForQuit();
-        } break;
-    };
+  switch(function) {
+  case 0: {
+    gmState = 1;
+  } break;
+  case 1: {
+    gmState = 2;
+  } break;
+  case 2: {
+    checkForQuit();
+  } break;
+  };
 }
 
 void DisplayMenu( s_MenuItem M[] )
 {
-    int pos = 0;
-    float x = 0;
-    float y =100 ;
-    while(pos < (int)sizeof(M))  {}
+  int pos = 0;
+  float x = 0;
+  float y =100 ;
+  while(pos < (int)sizeof(M))  {}
 }
 void dispMarker()
 {
@@ -98,15 +98,15 @@ void mMenuBackground()
 
 void mMenu()
 {
-    mMenuBackground();
-    dispMarker();
-    dispMMenu();
+  mMenuBackground();
+  dispMarker();
+  dispMMenu();
 }
 
 
 
 /*
-    Pause Menu interface.
+  Pause Menu interface.
 */
 void dispPMenu()
 {
@@ -118,8 +118,8 @@ void pMenuBackground()
 
 void pMenu()
 {
-    pMenuBackground();
-    dispMarker();
-    dispPMenu();
+  pMenuBackground();
+  dispMarker();
+  dispPMenu();
 
 }

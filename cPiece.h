@@ -12,24 +12,24 @@ extern void dSolidBlock();
 
 class cPiece {
 
-	int gPiece[ph][pw];
-	int gPType;
-	int x,y;
-public:
-	cPiece() { gPType = 0;x=0;y=0; }
-	void selType();
-	void setType(int);
-	void setPosition(int,int);
-	void initPiece();
-	void initPosition();
-	int  moveDown();
-	void moveLeft();
-	void moveRight();
-	void rotateRight();
-	void rotateLeft();
-	void show();
-	void push();
-	int get() {return gPType;}
+  int gPiece[ph][pw];
+  int gPType;
+  int x,y;
+ public:
+  cPiece() { gPType = 0;x=0;y=0; }
+  void selType();
+  void setType(int);
+  void setPosition(int,int);
+  void initPiece();
+  void initPosition();
+  int  moveDown();
+  void moveLeft();
+  void moveRight();
+  void rotateRight();
+  void rotateLeft();
+  void show();
+  void push();
+  int get() {return gPType;}
 };
 
 
