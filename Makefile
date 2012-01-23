@@ -1,7 +1,8 @@
-dsquared: main.o board.o cPiece.o charset.h menu.h setColors.h dSquared.h cTimer.h
-	gcc -o dsq main.o board.o cPiece.o -I. -lGL -lGLU -lglut -lX11
+CFLAGS = -lGL -lglut -lGLU
 
-CFLAGS = -lGL -lglut
+dsquared: main.o board.o cPiece.o charset.h menu.h setColors.h dSquared.h cTimer.h
+	gcc -o dsq main.o board.o cPiece.o -I. $(CFLAGS)
+
 main.o: main.cpp dSquared.h
 	gcc -c main.cpp -I. $(CFLAGS)
 
