@@ -10,3 +10,6 @@ board.o: board.cpp dSquared.h
  
 cPiece.o: cPiece.cpp dSquared.h
 	gcc -c cPiece.cpp -I. $(CFLAGS)
+
+clean: 
+	rm *.o dsq
