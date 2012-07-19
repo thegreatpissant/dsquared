@@ -396,7 +396,7 @@ void init_game(void)
   prep_timer(); //Game Piece Movement Timing
 }
 
-void init_view(void)
+ void init_view(void)
 /*
  * Whole view for the entire Window.
  */
