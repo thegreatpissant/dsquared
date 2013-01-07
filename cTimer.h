@@ -3,6 +3,7 @@
  */
 #include <sys/times.h>
 #include <iostream>
+#include <unistd.h>
 
 extern int CurLevel;
 int level_delay = 100;

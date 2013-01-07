@@ -73,12 +73,8 @@ void StartMenuFunctions(int function)
   };
 }
 
-void DisplayMenu( s_MenuItem M[] )
+void DisplayMenu( s_MenuItem  M[] )
 {
-  int pos = 0;
-  float x = 0;
-  float y =100 ;
-  while(pos < (int)sizeof(M))  {}
 }
 void dispMarker()
 {
